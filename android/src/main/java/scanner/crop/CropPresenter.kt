@@ -1,3 +1,4 @@
+package scanner.crop
 
 import android.Manifest
 import android.content.Context
@@ -101,7 +102,7 @@ class CropPresenter(val context: Context, private val iCropView: ICropView.Proxy
     }
 
     fun save() {
-        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+        if (context.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             Toast.makeText(context, "please grant write file permission and trya gain", Toast.LENGTH_SHORT).show()
         } else {
             val dir = File(Environment.getExternalStorageDirectory(), IMAGES_DIR)

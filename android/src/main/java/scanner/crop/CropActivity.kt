@@ -1,7 +1,8 @@
 package scanner.crop
 
 import android.widget.ImageView
-import scanner.R
+import com.reactlibrary.R
+//import scanner.R
 import scanner.base.BaseActivity
 import scanner.view.PaperRectangle
 import kotlinx.android.synthetic.main.activity_crop.*

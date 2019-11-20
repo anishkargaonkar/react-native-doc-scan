@@ -2,12 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.reactlibrary">
 
-    <application>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
         <activity
-            android:name="scanner.base.BaseActivity"
-            android:label="@string/title_activity_base"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Kot" />
+            android:name="scanner.scan.ScanActivity"
+            android:label="@string/scan"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="scanner.crop.CropActivity"
+            android:label="@string/crop"
+            android:launchMode="singleTask" />
     </application>
 
 </manifest>

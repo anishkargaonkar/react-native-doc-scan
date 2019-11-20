@@ -1,7 +1,5 @@
 package scanner.view
 
-package scanner.view
-
 import android.app.Activity
 import android.content.Context
 import android.graphics.*
