@@ -1,1 +1,1 @@
-include ':openCVLibrary320', ':kotlin-gradle-plugin-1.3.50'
+include ':openCVLibrary320'

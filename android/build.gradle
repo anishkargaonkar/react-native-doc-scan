@@ -36,11 +36,9 @@ buildscript {
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:3.4.1'
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+            classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
         }
-    }
-    dependencies {
-//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-//        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
     }
 }
 
@@ -83,9 +81,9 @@ repositories {
     }
 }
 
-//apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android'
 //apply plugin: 'kotlin-kapt'
-//apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android-extensions'
 
 dependencies {
     //noinspection GradleDynamicVersion

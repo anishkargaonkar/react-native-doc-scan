@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('kotlin-gradle-plugin-1.3.50.jar'))

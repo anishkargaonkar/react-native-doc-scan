@@ -2,8 +2,6 @@ package scanner.scan
 
 
 import android.content.pm.PackageManager
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.view.Display
 import android.view.SurfaceView
@@ -13,6 +11,7 @@ import scanner.base.BaseActivity
 import scanner.view.PaperRectangle
 
 import kotlinx.android.synthetic.main.activity_scan.*
+
 import org.opencv.android.OpenCVLoader
 
 class ScanActivity : BaseActivity(), IScanView.Proxy {

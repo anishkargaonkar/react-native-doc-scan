@@ -1,9 +1,15 @@
 package com.reactlibrary;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.util.Log;
+
+import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
+
+import scanner.scan.ScanActivity;
 
 public class DocScanModule extends ReactContextBaseJavaModule {
 
@@ -23,7 +29,12 @@ public class DocScanModule extends ReactContextBaseJavaModule {
     public void sampleMethod(String stringArgument, int numberArgument, Callback callback) {
         // TODO: Implement some actually useful functionality
 
+        Activity currentActivity = getCurrentActivity();
+        Log.d("Called from react", "start scan ReactNativeAndroidScanner ");
 
+//        new com.scanner.ScanActivity();
+        Intent intent = new Intent(getReactApplicationContext(), ScanActivity.class);
+        currentActivity.startActivity(intent);
 
         callback.invoke("Received numberArgument: " + numberArgument + " stringArgument: " + stringArgument);
 
