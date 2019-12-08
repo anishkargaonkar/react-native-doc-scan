@@ -39,4 +39,12 @@ public class DocScanModule extends ReactContextBaseJavaModule {
         callback.invoke("Received numberArgument: " + numberArgument + " stringArgument: " + stringArgument);
 
     }
+
+    @ReactMethod
+    public void initiateObjectDetection(){
+        ReactApplicationContext context = getReactApplicationContext();
+        Intent intent = new Intent(context, ScanActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
 }
