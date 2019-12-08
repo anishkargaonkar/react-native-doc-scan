@@ -18,12 +18,15 @@ export default class App extends Component<{}> {
     message: '--'
   };
   componentDidMount() {
-    DocScan.sampleMethod('Testing', 123, (message) => {
-      this.setState({
-        status: 'native callback received',
-        message
-      });
-    });
+    console.log(DocScan);
+    
+    // DocScan.sampleMethod('Testing', 123, (message) => {
+    //   this.setState({
+    //     status: 'native callback received',
+    //     message
+    //   });
+    // });
+    DocScan.initiateObjectDetection()
   }
   render() {
     return (
